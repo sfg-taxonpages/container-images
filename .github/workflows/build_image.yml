@@ -1,0 +1,50 @@
+name: Build image
+on:
+  workflow_dispatch:
+    inputs:
+      repo:
+        type: choice
+        description: Repository
+        options:
+        - aphid
+        - chrysididae
+        - cockroach
+        - coleorrhyncha
+        - coreoidea
+        - dermaptera
+        - embioptera
+        - grylloblattodea
+        - hoppers
+        - lygaeoidea
+        - mantodea
+        - mantophasmatodea
+        - orthoptera
+        - phasmida
+        - plecoptera
+        - psocodea
+        - zoraptera
+
+env:
+  REGISTRY: ghcr.io
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+    steps:
+    - name: Git checkout
+      uses: actions/checkout@v3
+    
+    - name: Build image
+      run: ./build_image.sh ${{ env.REGISTRY }} ${{ matrix.repo }}
+
+    - name: Log in to the Container registry
+      uses: docker/login-action@v2
+      with:
+        registry: ${{ env.REGISTRY }}
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Push image to registry
+      run: docker push ${{ env.REGISTRY }}/sfg-taxonpages/${{ matrix.repo }}
