@@ -23,6 +23,7 @@ jobs:
         - dermaptera
         - embioptera
         - grylloblattodea
+        - hoppers
         - lygaeoidea
         - mantodea
         - mantophasmatodea
