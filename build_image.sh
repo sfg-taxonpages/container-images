@@ -5,7 +5,7 @@ set -e
 rm -rf tmp
 git clone https://github.com/sfg-taxonpages/$2.git tmp
 cd tmp 
-git checkout main 
+git checkout $3
 git checkout setup . 
 rm config/router.yml 
 cd .. 
