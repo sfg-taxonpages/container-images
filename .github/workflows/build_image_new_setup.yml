@@ -1,4 +1,4 @@
-name: Build image
+name: Build image (new-setup)
 on:
   workflow_dispatch:
     inputs:
