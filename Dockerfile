@@ -2,7 +2,7 @@ FROM node:24-alpine
 
 WORKDIR /usr/src/app
 
-ADD package.json package-lock.json .
+ADD package.json .
 RUN npm install
 
 ADD . .
