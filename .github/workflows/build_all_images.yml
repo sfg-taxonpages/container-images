@@ -22,12 +22,12 @@ jobs:
         - coreoidea
         - dermaptera
         - embioptera
-        - grylloblattodea
         - hoppers
         - isoptera
         - lygaeoidea
         - mantodea
         - mantophasmatodea
+        - misc
         - orthoptera
         - phasmida
         - plecoptera
