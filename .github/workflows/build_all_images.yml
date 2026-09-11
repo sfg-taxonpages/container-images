@@ -18,21 +18,17 @@ jobs:
         - aphid
         - chrysididae
         - cockroach
-        - coleorrhyncha
         - coreoidea
         - dermaptera
-        - embioptera
         - hoppers
         - isoptera
         - lygaeoidea
         - mantodea
-        - mantophasmatodea
         - misc
         - orthoptera
         - phasmida
         - plecoptera
         - psocodea
-        - zoraptera 
 
     steps:
     - name: Git checkout

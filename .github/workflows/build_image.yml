@@ -9,21 +9,17 @@ on:
         - aphid
         - chrysididae
         - cockroach
-        - coleorrhyncha
         - coreoidea
         - dermaptera
-        - embioptera
         - hoppers
         - isoptera
         - lygaeoidea
         - mantodea
-        - mantophasmatodea
         - misc
         - orthoptera
         - phasmida
         - plecoptera
         - psocodea
-        - zoraptera
       branch:
         type: string
         description: Git branch to build
