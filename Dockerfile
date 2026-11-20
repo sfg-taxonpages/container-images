@@ -8,5 +8,6 @@ RUN npm install && npm list
 ADD . .
 RUN npm run build:ssr
 
-CMD npm run serve
+ENTRYPOINT ["/bin/sh", "/usr/src/app/entrypoint.sh"]
 
+CMD ["npm", "run", "serve"]

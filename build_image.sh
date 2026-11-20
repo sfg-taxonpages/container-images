@@ -8,6 +8,6 @@ cd tmp
 git checkout $3
 rm -f config/router.yml package-lock.json
 cd ..
-cp Dockerfile .dockerignore tmp
+cp Dockerfile .dockerignore entrypoint.sh set-ssr-url.mjs tmp
 docker build -t $1/sfg-taxonpages/$2 tmp
 rm -rf tmp
