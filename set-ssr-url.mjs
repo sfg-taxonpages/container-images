@@ -59,7 +59,7 @@ if (matches.length > 1) {
   throw new Error(`Duplicate ssr_url entries in ${path}`)
 }
 
-const line = `ssr_url: ${JSON.stringify(endpoint)}`
+const line = `  ssr_url: ${JSON.stringify(endpoint)}`
 
 const updated = matches.length
   ? original.replace(keyPattern, line)
